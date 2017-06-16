@@ -126,6 +126,7 @@
                                            HorizontalAlignment="Center">You can close the start screen by either clicking the button below or by pressing ESC</TextBlock>
                                 <Fluent:Button HorizontalAlignment="Center"
                                                LargeIcon="pack://application:,,,/Fluent.Ribbon.Showcase;component/Images/Exit.png"
+                                               x:Name="startscreenclosebutton"
                                                IsDefinitive="True">Close start screen</Fluent:Button>
                             </StackPanel>
                         </Fluent:StartScreenTabControl.RightContent>
@@ -136,7 +137,7 @@
             <Fluent:Ribbon.Menu>
                 <Grid>
                     <!--Backstage items can be keytipped-->
-                    <Fluent:Backstage Visibility="{Binding IsChecked, ElementName=UseBackstage, Converter={StaticResource boolToVisibilityConverter}}">
+                    <Fluent:Backstage x:Name="backstage"  Visibility="{Binding IsChecked, ElementName=UseBackstage, Converter={StaticResource boolToVisibilityConverter}}">
                         
                         <!--<Fluent:Backstage.Style>
                             <Style TargetType="Fluent:Backstage">

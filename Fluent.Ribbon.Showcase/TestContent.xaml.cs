@@ -28,6 +28,14 @@
 
             this.viewModel = new MainViewModel();
             this.DataContext = this.viewModel;
+
+
+            this.startScreen.IsOpen = true;
+            this.startScreen.CanChangeIsOpen = false;
+            this.startscreenclosebutton.Click += (sender, args) =>
+            {
+                this.backstage.IsOpen = true;
+            };
         }
 
         private void HookEvents()
